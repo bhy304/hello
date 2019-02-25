@@ -6,3 +6,4 @@ _*.py
 crawl/images
 crawl/data
 ttt
+bigquery.json
