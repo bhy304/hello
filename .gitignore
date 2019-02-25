@@ -1,6 +1,3 @@
-bq.json
-*bigquery.json
-mgy.py
 .vscode
 __pycache__
 hw_*
