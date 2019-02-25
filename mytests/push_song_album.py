@@ -2,9 +2,11 @@ from google.cloud import bigquery as bq
 import bigquery
 import pymysql
 from collections import namedtuple
-import sys
+import sys, os
 from pprint import pprint
-client = bigquery.get_client(json_key_file='./bq.json', readonly=False)
+
+KeyFile = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
+client = bigquery.get_client(json_key_file=KeyFile, readonly=False)
 
 DATABASE = "bqdb"
 TABLE = "Song"
@@ -14,7 +16,7 @@ Sql = '''
         a.likecnt as album_likecnt, cast(a.rate as char(5)) as album_rate 
     from Song s inner join Album a on s.albumid = a.albumid
     order by s.songno desc
-    limit 5
+    limit 100
 '''
 
 def createIfNotExists():
