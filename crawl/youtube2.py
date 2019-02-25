@@ -3,8 +3,9 @@
 from apiclient.discovery import build
 from pymongo import MongoClient, DESCENDING
 from pprint import pprint
+import os
 
-API_KEY = "AIzaSyAYQ9CBn8msCRbxuwHPOhm-Za0iJl4LorU"
+API_KEY = os.getenv("YoutubeKey")
 
 def main():
     mongo_client = MongoClient('localhost', 27017)
