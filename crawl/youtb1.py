@@ -1,8 +1,8 @@
 from apiclient.discovery import build
 from pprint import pprint
+import os
 
-API_KEY = "AIzaSyAYQ9CBn8msCRbxuwHPOhm-Za0iJl4LorU"
-
+API_KEY = os.getenv("YoutubeKey")
 youtube = build('youtube', 'v3', developerKey=API_KEY)
 
 req = youtube.search().list(
