@@ -1,7 +1,8 @@
-import bigquery
+import bigquery 
 import sys, os
 
-client = bigquery.get_client(json_key_file='../../bigquery.json', readonly=False)
+KeyFile = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
+client = bigquery.get_client(json_key_file=KeyFile, readonly=False)
 
 DATABASE = "bqdb"
 TABLE = "test1"
@@ -21,7 +22,7 @@ if not client.check_table(DATABASE, TABLE):
     ])
 
 ttt = [
-    {'songno': '1.27', 'title': '홍1', 'albumid': '121212121', "rec":  {"sub1": "abc1" } },
+    {'songno': '2.27', 'title': '홍1', 'albumid': '121212121', "rec":  {"sub1": "abc1" } },
     # {'songno': '1.24', 'title': '홍3', 'albumid': '121212121', "rec.sub1": "abc1"},
     # {'songno': '222', 'title': '홍2', 'albumid': '121212121'},
     # {'songno': '30190630', 'title': '홍3', 'albumid': '10029181'},
