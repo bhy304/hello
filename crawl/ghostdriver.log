@@ -1,0 +1,62 @@
+[INFO  - 2019-01-10T04:02:17.422Z] GhostDriver - Main - running on port 58215
+[INFO  - 2019-01-10T04:02:17.843Z] Session [8572c8e0-148c-11e9-a9ba-530507ac1b4e] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.0.0 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2019-01-10T04:02:17.843Z] Session [8572c8e0-148c-11e9-a9ba-530507ac1b4e] - page.customHeaders:  - {}
+[INFO  - 2019-01-10T04:02:17.843Z] Session [8572c8e0-148c-11e9-a9ba-530507ac1b4e] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.0.0","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.9 (Mavericks)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2019-01-10T04:02:17.844Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 8572c8e0-148c-11e9-a9ba-530507ac1b4e
+[ERROR - 2019-01-10T04:02:19.090Z] Session [8572c8e0-148c-11e9-a9ba-530507ac1b4e] - page.onError - msg: TypeError: null is not an object (evaluating 'da_ua.match(/Version\/([0-9\.]+)/i)[1]')
+
+  :262 in error
+[ERROR - 2019-01-10T04:02:19.091Z] Session [8572c8e0-148c-11e9-a9ba-530507ac1b4e] - page.onError - stack:
+  searchBrowserVersion (https://ssl.pstatic.net/tveta/libs/assets/js/pc/main/min/pc.veta.core.min.js?20170807:1)
+  init (https://ssl.pstatic.net/tveta/libs/assets/js/pc/main/min/pc.veta.core.min.js?20170807:1)
+
+  :262 in error
+[ERROR - 2019-01-10T04:02:19.299Z] Session [8572c8e0-148c-11e9-a9ba-530507ac1b4e] - page.onError - msg: TypeError: null is not an object (evaluating 'da_ua.match(/Version\/([0-9\.]+)/i)[1]')
+
+  :262 in error
+[ERROR - 2019-01-10T04:02:19.299Z] Session [8572c8e0-148c-11e9-a9ba-530507ac1b4e] - page.onError - stack:
+  searchBrowserVersion (https://ssl.pstatic.net/tveta/libs/assets/js/pc/main/min/pc.veta.core.min.js?20180328:1)
+  init (https://ssl.pstatic.net/tveta/libs/assets/js/pc/main/min/pc.veta.core.min.js?20180328:1)
+
+  :262 in error
+[ERROR - 2019-01-10T04:02:19.388Z] Session [8572c8e0-148c-11e9-a9ba-530507ac1b4e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'naver_corp_da.loadScript')
+
+  :262 in error
+[ERROR - 2019-01-10T04:02:19.388Z] Session [8572c8e0-148c-11e9-a9ba-530507ac1b4e] - page.onError - stack:
+  loadScripts (https://nv.veta.naver.com/fxshow?su=SU10079&nrefreshx=0:59)
+  lazyLoading (https://nv.veta.naver.com/fxshow?su=SU10079&nrefreshx=0:42)
+  onload (https://nv.veta.naver.com/fxshow?su=SU10079&nrefreshx=0:19)
+
+  :262 in error
+[ERROR - 2019-01-10T04:02:19.562Z] Session [8572c8e0-148c-11e9-a9ba-530507ac1b4e] - page.onError - msg: TypeError: null is not an object (evaluating 'da_ua.match(/Version\/([0-9\.]+)/i)[1]')
+
+  :262 in error
+[ERROR - 2019-01-10T04:02:19.562Z] Session [8572c8e0-148c-11e9-a9ba-530507ac1b4e] - page.onError - stack:
+  searchBrowserVersion (https://ssl.pstatic.net/tveta/libs/assets/js/pc/main/min/pc.veta.core.min.js?20170222:1)
+  init (https://ssl.pstatic.net/tveta/libs/assets/js/pc/main/min/pc.veta.core.min.js?20170222:1)
+
+  :262 in error
+[ERROR - 2019-01-10T04:02:20.135Z] Session [8572c8e0-148c-11e9-a9ba-530507ac1b4e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'new Nimp')
+
+  :262 in error
+[ERROR - 2019-01-10T04:02:20.135Z] Session [8572c8e0-148c-11e9-a9ba-530507ac1b4e] - page.onError - stack:
+  initAd (https://nv.veta.naver.com/fxshow?su=SU10078&nrefreshx=0:76)
+  lazyLoading (https://nv.veta.naver.com/fxshow?su=SU10078&nrefreshx=0:71)
+  onload (https://nv.veta.naver.com/fxshow?su=SU10078&nrefreshx=0:61)
+
+  :262 in error
+[ERROR - 2019-01-10T04:02:33.968Z] Session [8572c8e0-148c-11e9-a9ba-530507ac1b4e] - page.onError - msg: TypeError: null is not an object (evaluating 'da_ua.match(/Version\/([0-9\.]+)/i)[1]')
+
+  :262 in error
+[ERROR - 2019-01-10T04:02:33.969Z] Session [8572c8e0-148c-11e9-a9ba-530507ac1b4e] - page.onError - stack:
+  searchBrowserVersion (https://ssl.pstatic.net/tveta/libs/assets/js/pc/main/min/pc.veta.core.min.js?20180330:1)
+  init (https://ssl.pstatic.net/tveta/libs/assets/js/pc/main/min/pc.veta.core.min.js?20180330:1)
+
+  :262 in error
+[ERROR - 2019-01-10T04:02:34.147Z] Session [8572c8e0-148c-11e9-a9ba-530507ac1b4e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'new NBP_CORP.Nimp()')
+
+  :262 in error
+[ERROR - 2019-01-10T04:02:34.147Z] Session [8572c8e0-148c-11e9-a9ba-530507ac1b4e] - page.onError - stack:
+  (anonymous function) (undefined:15)
+
+  :262 in error

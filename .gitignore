@@ -1,0 +1,10 @@
+bq.json
+*biquery.json
+.vscode
+__pycache__
+hw_*
+p.py
+_*.py
+crawl/images
+crawl/data
+ttt
