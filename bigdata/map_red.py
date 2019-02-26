@@ -1,13 +1,6 @@
-import re, sys
-from pprint import pprint
+import sys, re
 
-# sample = '''0067011990999991950051507004+68750+023550FM-12+038299999V0203301N00671220001CN9999999N9+00001+99999999999
-# 0043011990999991950051512004+68750+023550FM-12+038299999V0203201N00671220001CN9999999N9+00221+99999999999
-# 0043011990999991950051518004+68750+023550FM-12+038299999V0203201N00261220001CN9999999N9-00111+99999999999
-# 0043012650999991949032412004+62300+010750FM-12+048599999V0202701N00461220001CN0500001N9+01111+99999999999
-# 0043012650999991949032418004+62300+010750FM-12+048599999V0202701N00461220001CN0500001N9+00781+99999999999'''
-
-sample = '''0067011990999991950051507004+68750+023550FM-12+038299999V0203301N00671220001CN9999999N9+00001+99999999999
+sample ='''0067011990999991950051507004+68750+023550FM-12+038299999V0203301N00671220001CN9999999N9+00001+99999999999
 0043011990999991945051512004+68750+023550FM-12+038299999V0203201N00671220001CN9999999N9+00225+99999999999
 0043011990999991950051518004+68750+023550FM-12+038299999V0203201N00261220001CN9999999N9-00111+99999999999
 0043012650999991949032412004+62300+010750FM-12+048599999V0202701N00461220001CN0500001N9+01117+99999999999
@@ -21,46 +14,42 @@ sample = '''0067011990999991950051507004+68750+023550FM-12+038299999V0203301N006
 0043012650999991943032412004+62300+010750FM-12+048599999V0202701N00461220001CN0500001N9+00191+99999999999
 0043012650999991949032412004+62300+010750FM-12+048599999V0202701N00461220001CN0500001N9+00131+99999999999'''
 
-samples = sample.split('\n')
-temp_types = list('01459')
 rec = re.compile('[01459]')
 
 def map():
-    ret = []
-    for line in samples:
+    mret = []
+    for line in sample.split('\n'):
         val = line.strip()
-        (year, temp, q) = (val[15:19], val[87:92], val[92:93])
+        (year, temp, t) = (val[15:19], val[87:92], val[92:93])
+        if rec.match(t):
+            print("%s\t%s" % (year, temp))
+            mret.append("%s\t%s" % (year, temp))
 
-        print("%s\t%s" % (year, temp))
-        # if (temp != "+9999" and re.match("[01459]", q)):
-        if (rec.match(q)):
-        # if (q in temp_types):
-            ret.append("%s\t%s" % (year, temp))
+    return mret
 
-    return ret
-
-def reduce(map_result):
+def red(map_result):
+    # last_key = None
+    # max_val = -sys.maxsize
     (last_key, max_val) = (None, -sys.maxsize)
 
-    for line in map_result:
-        (key, val) = line.strip().split("\t")
+    for line  in map_result:
+        (key, val) = line.strip().split('\t')
         if last_key and last_key != key:
-            print("%s\t%s" % (last_key, max_val))
+            print("%s\t%s" % (last_key, max_val))  # 전년도 출력
             (last_key, max_val) = (key, int(val))
 
         else:
             (last_key, max_val) = (key, max(max_val, int(val)))
 
-    print("%s\t%s" % (last_key, max_val))
+    print("%s\t%s" % (last_key, max_val))  # 막년 출력
 
+# print("-------------------------- map")
 map_result = map()
-print("------------------------ map")
-for m in map_result:
-    print(m)
-print("------------------------------------ sort")
+exit()
+print("-------------------------- sort")
 map_result.sort()
 for i in map_result:
     print(i)
-print("------------------------------------ reduce")
 
-reduce(map_result)
+print("-------------------------- reduce")
+red(map_result)
