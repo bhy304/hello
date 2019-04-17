@@ -17,3 +17,6 @@ clf.fit(trainData, trainLabel)   # 훈련(학습)
 pred = clf.predict(testData)     # 검증(test)
 score = metrics.accuracy_score(testLabel, pred)
 print("score=", score)
+
+print("-----------------------")
+print(clf.predict([[5.5, 4.2, 1.4, 0.2]]))
