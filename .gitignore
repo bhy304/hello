@@ -7,3 +7,5 @@ crawl/images
 crawl/data
 ttt
 bigquery.json
+ml/data
+mytests/data
