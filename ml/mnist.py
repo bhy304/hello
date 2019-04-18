@@ -16,7 +16,7 @@ def readCsv(file, maxcnt):
     return {"labels": labels, "images": images}
 
 
-test = readCsv('./data/t10k.csv', 100)
+test = readCsv('./data/t10k.csv', 10000)
 
 # print(test['images'])
 pklFile = "./data/mnist.pkl"
@@ -27,7 +27,7 @@ if Path(pklFile).exists():              # from pathlib import Path
 
 # training ---------------------------
 if not clf:
-    train = readCsv('./data/train.csv', 3000)   # 학습용 데이터가 많아질수록 스코어 상승!
+    train = readCsv('./data/train.csv', 60000)   # 학습용 데이터가 많아질수록 스코어 상승!
     clf = svm.SVC(gamma='auto')
     clf.fit(train['images'], train['labels'])
     joblib.dump(clf, pklFile)
